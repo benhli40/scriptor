@@ -20,3 +20,9 @@ editor.addEventListener('input', () => {
   updatePreview(content);
   saveVersion(content);
 });
+
+const snapshotBtn = document.getElementById('save-snapshot');
+
+snapshotBtn?.addEventListener('click', () => {
+  saveVersion(editor.value);
+});
