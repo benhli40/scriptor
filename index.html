@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scriptor – Minimal Markdown Editor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+</head>
+<body>
+
+  <header>
+    <h1>Scriptor</h1>
+    <p class="tagline">The Obsidian/Notion that lives on your desktop and doesn’t spy on you.</p>
+    <button id="toggle-theme">🌓 Theme</button>
+  </header>
+
+  <main class="editor-container">
+    <section id="editor-pane">
+      <h2>Editor</h2>
+      <textarea id="editor" placeholder="# Start typing markdown..."></textarea>
+    </section>
+
+    <section id="preview-pane">
+      <h2>Preview</h2>
+      <div id="preview" class="markdown-output"></div>
+    </section>
+  </main>
+
+  <section id="version-history">
+    <h2>History</h2>
+    <ul id="versions"></ul>
+  </section>
+
+  <footer>
+    <p>Scriptor by Benjamin Lisle – Built with vanilla JS, no tracking, no clutter.</p>
+  </footer>
+
+  <!-- JS Modules -->
+  <script src="js/script.js" defer></script>
+  <script type="module" src="js/editor.js"></script>
+</body>
+</html>

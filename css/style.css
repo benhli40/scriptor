@@ -1,0 +1,171 @@
+/* === Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+#toggle-theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#toggle-theme:hover {
+  background-color: #0056b3;
+}
+
+/* === Editor Layout === */
+.editor-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+#editor-pane,
+#preview-pane {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+#editor-pane h2,
+#preview-pane h2 {
+  margin-bottom: 0.5rem;
+}
+
+#editor {
+  flex-grow: 1;
+  min-height: 300px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: #fafafa;
+  color: #222;
+}
+
+#preview {
+  flex-grow: 1;
+  min-height: 300px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fdfdfd;
+  overflow-y: auto;
+}
+
+/* === Markdown Preview Styling === */
+.markdown-output h1 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+.markdown-output h2 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.markdown-output p {
+  margin: 0.5rem 0;
+}
+
+.markdown-output code {
+  background-color: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.markdown-output pre {
+  background-color: #eee;
+  padding: 0.75rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* === Version History (future feature) === */
+#version-history {
+  margin-top: 2rem;
+}
+
+#versions {
+  list-style: none;
+  padding-left: 0;
+}
+
+#versions li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* === Dark Mode === */
+body.dark {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark #editor,
+body.dark #preview {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark .markdown-output code,
+body.dark .markdown-output pre {
+  background-color: #2c2c2c;
+}
+
+body.dark #toggle-theme {
+  background-color: #4da6ff;
+}
+
+body.dark #toggle-theme:hover {
+  background-color: #1e90ff;
+}
